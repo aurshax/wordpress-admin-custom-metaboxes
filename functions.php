@@ -1,5 +1,6 @@
 <?php
 const SOF_VERSION = '1.0.0';
+define("SOF_PATH", dirname(__FILE__));
 define("SOF_URL", get_stylesheet_directory_uri());
 define("SOF_ASSETS", SOF_URL . '/assets' );
 
@@ -49,3 +50,30 @@ if(!function_exists('sof_admin_enqueue_scripts')) {
     }
 }
 add_action( 'admin_enqueue_scripts', 'sof_admin_enqueue_scripts' );
+
+/**
+ * Path
+ *
+ * @param $path
+ * @return void
+ */
+function sof_autoload_functions($path) {
+    $items = glob( $path . DIRECTORY_SEPARATOR . '*' );
+    foreach ( $items as $item ) {
+        if ( is_file( $item ) ) {
+            $basename = basename( $item );
+            if ( 'php' === pathinfo( $item )['extension'] ) {
+                include_once $item;
+            }
+        }
+    }
+
+    foreach ( $items as $item ) {
+        if ( is_dir( $item ) ) {
+            sof_autoload_functions( $item );
+        }
+    }
+}
+
+
+sof_autoload_functions(SOF_PATH . '/metaboxes');;
