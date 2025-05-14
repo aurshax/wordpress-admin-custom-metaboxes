@@ -1,0 +1,217 @@
+.sof-meta-tab {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	display: flex;
+	border-bottom: 1px solid #ddd;
+}
+.sof-meta-tab-link {
+	height: 48px;
+	padding: 0 14px;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #1e1e1e;
+	font-weight: 500;
+	font-size: 15px;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+}
+.sof-meta-tab-link.active {
+	box-shadow: inset 0 0 0 2px transparent, inset 0 -4px 0 0 #007cba;
+}
+.sof-meta-content-item {
+	padding: 20px 0 0 0;
+	display: none;
+}
+.sof-meta-content-item.active {
+	display: block;
+}
+.sof-meta-tab-link:hover {
+	color: #007cba;
+}
+.sof-meta {
+	max-width: 100%;
+}
+
+.sof-field-container {
+	width: 100%;
+	display: flex;
+	border-bottom: 1px solid #e7e7e7;
+}
+.sof-meta-section-title {
+	margin-bottom: 0;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.sof-metabox__label {
+	flex: 0 0 30%;
+	font-weight: 600;
+	padding: 20px 10px 20px 0;
+	display: block;
+}
+.sof-metabox__title {
+	font-size: 14px;
+	line-height: 1.3;
+}
+.sof-metabox__desc {
+	padding-top: 5px;
+	font-weight: normal;
+	line-height: 1.3;
+	font-size: 12px;
+}
+.sof-field-container__inner {
+	flex-grow: 1;
+	padding: 20px 10px 20px 0;
+}
+.sof-transparency-check {
+	padding-top: 7px;
+	display: inline-block;
+}
+.sof-select-box .select2-container {
+	width: 100%;
+	max-width: 250px;
+}
+.sof-select-box .select2-container.select2-container-multi {
+	max-width: 350px;
+}
+.sof-switch-box .cb-enable {
+	border-right: 0;
+	border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+}
+.sof-switch-box .cb-enable, .sof-switch-box .cb-disable, .sof-switch-box .cb-enable span, .sof-switch-box .cb-disable span {
+	display: block;
+	float: left;
+}
+.sof-switch-box .cb-enable, .sof-switch-box .cb-disable {
+	padding: 0 10px;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-appearance: none;
+	white-space: nowrap;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.sof-switch-box .cb-enable span, .sof-switch-box .cb-disable span {
+	line-height: 30px;
+	display: block;
+	font-weight: 700;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.sof-switch-box .cb-disable, .sof-switch-box .cb-enable {
+	background-color: #f5f5f5 !important;
+	background-image: -khtml-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f5f5f5)) !important;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f8f8f8),color-stop(100%,#f5f5f5)) !important;
+	background-image: -webkit-linear-gradient(top,#f8f8f8,#f5f5f5) !important;
+	background-image: -linear-gradient(top,#f8f8f8,#f5f5f5) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8",endColorstr="#f5f5f5",GradientType=0) !important;
+	border-color: #ccc !important;
+}
+.sof-switch-box .cb-disable.selected {
+	background-color: #646464 !important;
+	background-image: -khtml-gradient(linear,left top,left bottom,from(#929292),to(#646464)) !important;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#929292),color-stop(100%,#646464)) !important;
+	background-image: -webkit-linear-gradient(top,#929292,#646464) !important;
+	background-image: -linear-gradient(top,#929292,#646464) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#929292",endColorstr="#646464",GradientType=0) !important;
+	border-color: #767676 !important;
+}
+.sof-switch-box .cb-enable.selected {
+	background-color: #0073aa !important;
+	background-image: -khtml-gradient(linear,left top,left bottom,from(#008bce),to(#0073aa)) !important;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#008bce),color-stop(100%,#0073aa)) !important;
+	background-image: -webkit-linear-gradient(top,#008bce,#0073aa) !important;
+	background-image: -linear-gradient(top,#008bce,#0073aa) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#008bce",endColorstr="#0073aa",GradientType=0) !important;
+	border-color: #003f5e !important;
+	border-color: #005177 !important;
+	-webkit-box-shadow: inset 0 1px 0 #00a7f7, 0 1px 0 rgb(0 0 0 / 15%) !important;
+	box-shadow: inset 0 1px 0 #00a7f7, 0 1px 0 rgb(0 0 0 / 15%) !important;
+}
+.sof-switch-box .cb-enable.selected, .sof-switch-box .cb-disable.selected {
+	color: #fff;
+}
+.sof-editor-box .mce-edit-area {
+	min-height: 200px;
+}
+.sof-background-box .background-item, .sof-background-box .sof-color-box, .background-image-wrapper__actions {
+	margin-bottom: 10px;
+}
+.background-select-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+.background-select-wrapper > div {
+	flex: 0 0 30%;
+}
+.sof-admin-input {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.sof-button-reset.button {
+	color: #ef521d;
+}
+.sof-image-remove-button.hide, .sof-media-preview.hide {
+	display: none;
+}
+.sof-background-preview {
+	border: 1px solid #e7e7e7;
+	min-height: 200px;
+}
+.sof-media-preview img {
+	max-height: 340px;
+	max-width: 340px;
+	padding: 5px;
+	margin-bottom: 0;
+	margin-top: 10px;
+	margin-right: 15px;
+	border: 1px solid #e3e3e3;
+	background: #f7f7f7;
+	border-radius: 3px;
+}
+.sof-repeater-box .sof-repeater-inner {
+	margin-bottom: 20px;
+}
+.sof-repeater-box .repeater-heading {
+	text-align: right;
+}
+.sof-repeater-box .sof-field-container {
+	flex-direction: column;
+}
+.sof-repeater-box .sof-field-container .sof-metabox__label {
+	padding: 10px 10px 0 0;
+}
+.sof-repeater-box .sof-field-container .sof-field-container__inner {
+	padding: 10px 10px 10px 0;
+}
+.sof-repeater-box .sof-repeater-inner > .items {
+	display: flex;
+	border: 1px solid #f7f7f7;
+	padding: 10px;
+}
+.sof-repeater-box .sof-repeater-inner > .items > .sof-field-container {
+	flex: 1;
+	border-bottom: 0;
+}
+.sof-repeater-box .sof-repeater-inner > .items > .sof-field-container .regular-text {
+	width: 100%;
+}
+.sof-repeater-box .sof-remove-item-wrapper {
+	display: flex;
+}
+.sof-repeater-box .sof-remove-btn {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+}
+.sof-repeater-box .sof-remove-btn i {
+	color: #F55E4F
+}
